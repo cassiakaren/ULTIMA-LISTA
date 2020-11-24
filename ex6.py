@@ -16,8 +16,10 @@ def cria_matriz2(num_linhas, num_colunas):
             linha.append(valor)
         seg_ma.append(linha)
     return seg_ma
-def dimensoes(m):
-    return len(m), len(m[0])
+def dimensoes1(m):
+    return len(m)
+def dimensoes2(m):
+    return len(m[0])
 def le_matriz():
     lin = int(input("Digite o número de linhas da primeira matriz: "))
     col = int(input("Digite o número de colunas da segunda matriz: "))
@@ -26,15 +28,14 @@ def le_matriz2():
     lin = int(input("Digite o número da primeira matriz: "))
     col = int(input("Digite o número da segunda matriz: "))
     return cria_matriz2(lin, col)
-def somarMatriz(pri_ma, seg_ma):
-    soma = 0
-    if dimensoes(pri_ma) == dimensoes(seg_ma):
-        for x in range(len(pri_ma)):
-            for y in range(len(seg_ma)):
-                soma += pri_ma[x][y] + seg_ma[x][y]
-        return soma
+
+def multiplicarMatriz(pri_ma, seg_ma):
+    if dimensoes1(pri_ma) == dimensoes2(seg_ma):
+        return True
     else:
         return False
+
+
 print(le_matriz())
 print(le_matriz2())
-print(somarMatriz(pri_ma , seg_ma))
+print(multiplicarMatriz(pri_ma, seg_ma))

@@ -1,22 +1,20 @@
-'''Escreva um programa que recebe como entradas (utilize a função input) dois números
-inteiros correspondentes à largura e à altura de um retângulo, respectivamente. O
-programa deve imprimir uma cadeia de caracteres que representa o retângulo
-informado com caracteres '#' na saída.'''
-def func_ret():
-    altura=[]
-    retangulo=[]
-    a=int(input('digite a altura: '))
-    b=int(input('digite a largura: '))
-    for item in range (a):
-        altura+=[item]
-    print(altura)
-    for iten in range(b):
-        retangulo.append(altura)
-    print(retangulo)
-    for linha in range(len(retangulo)):
-        for coluna in range (len(retangulo[0][:])):
-            print ('#', end = '')
-        print()
-        
-func_ret()
-    
+#1) Escreva um programa que recebe como entradas (utilize a função input) dois números
+#inteiros correspondentes à largura e à altura de um retângulo, respectivamente. O
+#programa deve imprimir uma cadeia de caracteres que representa o retângulo
+#informado com caracteres '#' na saída.
+
+
+larg = int(input("Digite a largura: "))
+altu = int(input("Digite a altura: "))
+# input de entrada das variaveis altura e largura
+linha = 0
+coluna = 0
+
+while linha < altu:
+    while coluna < larg:
+        print("#", end="")
+        coluna = coluna + 1
+    print()
+
+    linha = linha+1
+    coluna = 0
